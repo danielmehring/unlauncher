@@ -143,6 +143,10 @@ class HomeFragment : BaseFragment(), OnLaunchAppListener {
                 .visibility = if (clockType == ClockType.analog) View.VISIBLE else View.GONE
             homeFragmentContent.homeFragmentBinTime
                 .visibility = if (clockType == ClockType.binary) View.VISIBLE else View.GONE
+            homeFragmentContent.homeFragmentScreenTime
+                .visibility = if (clockType == ClockType.screen_time) View.VISIBLE else View.GONE
+            homeFragmentContent.homeFragmentDate
+                .visibility = if (clockType != ClockType.date) View.VISIBLE else View.GONE
             homeFragmentContent.homeFragmentDate
                 .visibility = if (clockType != ClockType.none) View.VISIBLE else View.GONE
         }

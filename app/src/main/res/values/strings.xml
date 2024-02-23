@@ -18,6 +18,8 @@
         <item>Digital clock</item>
         <item>Analog clock</item>
         <item>Binary clock</item>
+        <item>Screen time</item>
+        <item>Date</item>
     </string-array>
     <string-array name="quick_button_array">
         <item>Show</item>

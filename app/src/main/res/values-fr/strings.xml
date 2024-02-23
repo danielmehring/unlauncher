@@ -10,6 +10,8 @@
         <item>Numérique</item>
         <item>Analogue</item>
         <item>Binaire</item>
+        <item>Temps d\'écran</item>
+        <item>Date</item>
     </string-array>
     <string-array name="quick_button_array">
         <item>Afficher</item>

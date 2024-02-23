@@ -24,6 +24,8 @@ enum ClockType {
   digital = 1;
   analog = 2;
   binary = 3;
+  screen_time = 4;
+  date = 5;
 }
 
 enum AlignmentFormat {
