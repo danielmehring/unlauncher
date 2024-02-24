@@ -146,9 +146,7 @@ class HomeFragment : BaseFragment(), OnLaunchAppListener {
             homeFragmentContent.homeFragmentScreenTime
                 .visibility = if (clockType == ClockType.screen_time) View.VISIBLE else View.GONE
             homeFragmentContent.homeFragmentDate
-                .visibility = if (clockType != ClockType.date) View.VISIBLE else View.GONE
-            homeFragmentContent.homeFragmentDate
-                .visibility = if (clockType != ClockType.none) View.VISIBLE else View.GONE
+                .visibility = if (clockType == ClockType.date) View.VISIBLE else View.INVISIBLE
         }
     }
 
@@ -355,8 +353,15 @@ class HomeFragment : BaseFragment(), OnLaunchAppListener {
             ClockType.digital -> updateClockDigital()
             ClockType.analog -> homeFragmentContent.homeFragmentAnalogTime.updateClock()
             ClockType.binary -> homeFragmentContent.homeFragmentBinTime.updateClock()
+            ClockType.date -> updateDate()
+            ClockType.screen_time -> updateScreenTime()
             else -> {}
         }
+    }
+
+    private fun updateScreenTime() {
+        val homeFragmentContent = HomeFragmentContentBinding.bind(requireView())
+        homeFragmentContent.homeFragmentScreenTime.text = "Test"
     }
 
     private fun updateClockDigital() {
